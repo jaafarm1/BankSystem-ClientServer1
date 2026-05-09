@@ -1,0 +1,426 @@
+/* ==================== GLOBAL STYLES ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
+}
+
+/* ==================== RTL SUPPORT ==================== */
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+body.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
+/* ==================== SIDEBAR STYLES ==================== */
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #2c3e50 0%, #1a252f 100%);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.sidebar .nav-link {
+    color: #ecf0f1;
+    padding: 12px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.sidebar .nav-link.active {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c5a7a 100%);
+}
+
+.sidebar .nav-link i {
+    width: 25px;
+    margin-right: 10px;
+}
+
+body.rtl .sidebar .nav-link i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* ==================== TOP BAR STYLES ==================== */
+.top-bar {
+    background: white;
+    border-radius: 15px;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* ==================== CARDS & STATS ==================== */
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    font-size: 24px;
+}
+
+.operation-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.operation-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================== BUTTONS ==================== */
+.btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    transition: all 0.3s;
+}
+
+.btn-custom {
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: all 0.3s;
+}
+
+.btn-custom:hover {
+    transform: translateY(-2px);
+}
+
+.language-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: all 0.3s;
+}
+
+.language-btn.active {
+    background: #1e3a5f;
+    color: white;
+    border-color: #1e3a5f;
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border: none;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* ==================== FORMS ==================== */
+.form-control {
+    border-radius: 20px;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.25);
+    border-color: #1e3a5f;
+}
+
+/* ==================== ALERTS ==================== */
+.alert {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* ==================== RESULT AREA ==================== */
+.result-area {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    display: none;
+}
+
+/* ==================== STAR RATING ==================== */
+.stars i, .stars-input i {
+    cursor: pointer;
+    font-size: 24px;
+    color: #ddd;
+    transition: color 0.2s;
+    margin: 0 2px;
+}
+
+.stars i:hover, .stars-input i:hover,
+.stars i.active, .stars-input i.active {
+    color: #ffc107;
+}
+
+/* ==================== TABLES ==================== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table th {
+    font-weight: 600;
+}
+
+/* ==================== FOOTER ==================== */
+footer, .footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #666;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* ==================== DARK MODE ==================== */
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #e0e0e0;
+}
+
+body.dark-mode .sidebar {
+    background: linear-gradient(180deg, #0f0f1a 0%, #0a0a10 100%);
+}
+
+body.dark-mode .top-bar,
+body.dark-mode .operation-card,
+body.dark-mode .footer,
+body.dark-mode .stat-card,
+body.dark-mode .card {
+    background: #2d2d3f;
+    color: #e0e0e0;
+    border-color: #3d3d5c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .result-area {
+    background: #1e1e2e;
+    color: #e0e0e0;
+    border-color: #3d3d5c;
+}
+
+body.dark-mode .table {
+    color: #e0e0e0;
+}
+
+body.dark-mode .table-bordered,
+body.dark-mode .table-bordered td,
+body.dark-mode .table-bordered th {
+    border-color: #3d3d5c;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #1e1e2e;
+    color: #e0e0e0;
+    border-color: #3d3d5c;
+}
+
+body.dark-mode .form-control:focus {
+    background: #2a2a3e;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+}
+
+body.dark-mode .dark-mode-toggle {
+    background: #3d3d5c;
+    color: #ffd700;
+}
+
+body.dark-mode .language-btn {
+    border-color: #3d3d5c;
+    color: #e0e0e0;
+}
+
+body.dark-mode .language-btn.active {
+    background: #1e3a5f;
+    color: white;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .sidebar .nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .sidebar .nav-item {
+        flex: 1;
+    }
+    
+    .stat-card {
+        margin-bottom: 15px;
+    }
+    
+    .operation-card {
+        padding: 15px;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .sidebar, 
+    .top-bar, 
+    .footer, 
+    .btn, 
+    .language-btn, 
+    .dark-mode-toggle,
+    .navbar,
+    nav {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        margin: 0;
+        padding: 0;
+        color: black;
+    }
+    
+    .operation-card, 
+    .stat-card, 
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        background: white;
+        color: black;
+        page-break-inside: avoid;
+    }
+    
+    .table {
+        color: black;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+/* ==================== UTILITIES ==================== */
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+.rounded-15 {
+    border-radius: 15px;
+}
+
+.rounded-20 {
+    border-radius: 20px;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse:hover {
+    animation: pulse 0.5s ease;
+}
